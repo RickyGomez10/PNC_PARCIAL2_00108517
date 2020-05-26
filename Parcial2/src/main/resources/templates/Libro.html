@@ -29,8 +29,9 @@
 
 <label>Categoria: </label>
 <select th:field="*{codigoCategoria}"> <option th:each ="categoria : ${categoria}" th:text="${categoria.categoria}" th:value="${categoria.codigoCategoria}"></select> <br> <br>
-
+<div class="check">
 <label>Estado: </label><input type="checkbox" th:field="*{estado}" style="background-color:white;"> Activo<br>
+</div>
 </div>
 <input type="submit" value="Guardar"> <br> <br>
 

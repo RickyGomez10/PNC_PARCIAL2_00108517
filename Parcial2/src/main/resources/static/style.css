@@ -95,6 +95,12 @@ text-align: center;
 }
 
 /* Inputs */ 
+.check{
+	display:flex;
+	flex-direction: row;
+	color: white;
+	font-size: 15px;
+}
 a{
 		font-size: 20px;
 	margin: 0;
