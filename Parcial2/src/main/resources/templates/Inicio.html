@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th ="http://www.thymeleaf.org">
+<head>
+ <link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="ISO-8859-1">
+<title>Inicio</title>
+</head>
+<body>
+<div class=inicio>
+<div class=cab>
+<h1>Seleccione una opcion - 00108517</h1>
+</div>
+<div class="inicio2">
+<button onclick="window.location.href='/Categoria'">Ingresar Categoria</button> <br> <br>
+<button onclick="window.location.href='/Libro'">Ingresar Libro</button> <br> <br>
+<button onclick="window.location.href='/VerLibros'">Ver Libros</button> <br> <br>
+</div>
+<h3 th:text="${mensaje}" style="color:white;"></h3>
+</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th ="http://www.thymeleaf.org">
+<head>
+ <link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<Form th:action ="@{/IngresarLibro}" th:object="${libro}" method ="post">
+<div class="inicio">
+<div class="cab">
+<h1>Ingresar Libro</h1>
+</div>
+<div class="inicio2">
+<label>Titulo: </label> <input type="text" th:field="*{titulo}">
+<span th:errors = "*{titulo}"  style="color:  #E81505;" name="nombre"></span>
+<br> <br>
+
+
+<label>Autor: </label> <input type="text" th:field="*{autor}"> 
+<span th:errors = "*{autor}"  style="color:  #E81505;" name="nombre"></span>
+<br> <br>
+
+
+<label>ISBN: </label> <input type="text" th:field="*{isbn}">
+<span th:errors = "*{isbn}"  style="color:  #E81505;" name="nombre"></span>
+ <br> <br>
+
+
+<label>Categoria: </label>
+<select th:field="*{codigoCategoria}"> <option th:each ="categoria : ${categoria}" th:text="${categoria.categoria}" th:value="${categoria.codigoCategoria}"></select> <br> <br>
+
+<label>Estado: </label><input type="checkbox" th:field="*{estado}" style="background-color:white;"> Activo<br>
+</div>
+<input type="submit" value="Guardar"> <br> <br>
+
+
+
+</Form>
+<a href='index'>Regresar</a> <br> <br>
+</div>
+
+</body>
+</html>
